@@ -5,13 +5,13 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-9"><h1 class="card-title">Касанчилар</h1></div>
+                    <div class="col-9"><h1 class="card-title">Info</h1></div>
                     <div class="col-md-1">
-                        <a class="btn btn-primary" href="{{route('admin.users.create')}}">
+                        <a class="btn btn-primary" href="{{route('info.create')}}">
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>
                             </span>
-                            кошиш
+                           Qo'shish
                         </a>
                     </div>
                 </div>
@@ -21,24 +21,32 @@
                         <thead>
                         <tr>
 
-                            <th  scope="col">номи</th>
-                            <th  scope="col">електрон почта</th>
+                            <th  scope="col">Nomi</th>
+                            <th  scope="col">Vaqti</th>
+                            <th  scope="col">Konferensiya haqida</th>
+                            <th  scope="col">Sho'balar</th>
+                            <th  scope="col">Shartlar</th>
+                            <th  scope="col">Deadline</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($users as $user)
+                        @foreach($info as $inf)
                             <tr>
 
-                                <td >{{$user->name}}</td>
-                                <td>{{$user->email}}</td>
+                                <td >{{$inf->nomi}}</td>
+                                <td>{{$inf->vaqti}}</td>
+                                <td >{{$inf->about}}</td>
+                                <td>{{$inf->shobalar}}</td>
+                                <td >{{$inf->shartlar}}</td>
+                                <td>{{$inf->deadline}}</td>
 
 
 
                                 <td>
-                                    <form action="{{ route('admin.users.destroy',$user ->id) }}" method="POST">
+                                    <form action="{{ route('info.destroy',$inf->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <a class="btn btn-warning btn-sm" href="{{ route('admin.users.edit',$user->id) }}">
+                                        <a class="btn btn-warning btn-sm" href="{{ route('info.edit',$inf->id) }}">
                                     <span class="btn-label">
                                         <i class="fa fa-pen"></i>
                                     </span>
@@ -60,24 +68,24 @@
     </div>
 
     <script src="{{asset('/assets/js/core/jquery.3.2.1.min.js')}}"></script>
-    <script>
-        $(document).ready( function () {
-            $('#mytable').DataTable({
-                "language": {
-                    "lengthMenu": "_MENU_",
-                    "zeroRecords": "Касаначи қошинг",
-                    "info": "_PAGE_ of _PAGES_",
-                    "infoEmpty": " ",
-                    "search":"қидириш:",
-                    "paginate": {
-                        "first": "биринчи",
-                        "previous": "олдинги",
-                        "next": "кейинки",
-                        "last": "охирги"
-                    },
-                }
-            });
-        } );
-    </script>
+{{--    <script>--}}
+{{--        $(document).ready( function () {--}}
+{{--            $('#mytable').DataTable({--}}
+{{--                "language": {--}}
+{{--                    "lengthMenu": "_MENU_",--}}
+{{--                    "zeroRecords": "Касаначи қошинг",--}}
+{{--                    "info": "_PAGE_ of _PAGES_",--}}
+{{--                    "infoEmpty": " ",--}}
+{{--                    "search":"қидириш:",--}}
+{{--                    "paginate": {--}}
+{{--                        "first": "биринчи",--}}
+{{--                        "previous": "олдинги",--}}
+{{--                        "next": "кейинки",--}}
+{{--                        "last": "охирги"--}}
+{{--                    },--}}
+{{--                }--}}
+{{--            });--}}
+{{--        } );--}}
+{{--    </script>--}}
 @endsection
 

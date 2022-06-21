@@ -45,7 +45,7 @@
         <div class="logo-header" data-background-color="blue">
 
             <a href="/" class="logo">
-                <p class="navbar-brand" style="color: white">Админ панель</p>
+                <p class="navbar-brand" style="color: white">Admin Panel</p>
             </a>
 
             <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"

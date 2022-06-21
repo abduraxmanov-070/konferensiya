@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('infos', function (Blueprint $table) {
             $table->id();
+            $table->string('nomi');
+            $table->string('vaqti');
+            $table->string('deadline');
+            $table->longText('about');
+            $table->longText('shobalar');
+            $table->longText('shartlar');
             $table->timestamps();
         });
     }

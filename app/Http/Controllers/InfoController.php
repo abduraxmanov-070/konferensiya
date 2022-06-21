@@ -14,7 +14,8 @@ class InfoController extends Controller
      */
     public function index()
     {
-        //
+        $info = Info::all();
+        return view('admin.users.index',compact('info'));
     }
 
     /**
@@ -24,7 +25,7 @@ class InfoController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**

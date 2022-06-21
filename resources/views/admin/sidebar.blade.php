@@ -9,10 +9,10 @@
 {{--                        <p>Foydalanuvchilar</p>--}}
 {{--                    </a>--}}
 {{--                </li>--}}
-                <li class="nav-item {{  request()->routeIs('admin.product.index') ? 'active' : '' }}">
-                    <a href="{{route('')}}">
+                <li class="nav-item {{  request()->routeIs('info.index') ? 'active' : '' }}">
+                    <a href="{{route('info.index')}}">
                         <i class="fa fa-tasks" aria-hidden="true"></i>
-                        <p>Saytlar</p>
+                        <p>Info</p>
                     </a>
                 </li>
             </ul>
