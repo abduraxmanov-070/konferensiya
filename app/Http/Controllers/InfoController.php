@@ -36,7 +36,8 @@ class InfoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Info::create($request->all());
+        return redirect()->back()->with('Saqlandi');
     }
 
     /**

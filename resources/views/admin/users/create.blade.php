@@ -11,7 +11,7 @@
 
                     @if ($errors->any())
                         <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                            <strong>Whoops!</strong> Nimadir xato ketdi.<br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
@@ -27,32 +27,28 @@
 
                         <div class="form-group">
                             <label for="header_ru">Nomi</label>
-                            <input type="text" name="nomi" class="form-control" id="header_ru">
+                            <input type="text" name="nomi"  required class="form-control" id="header_ru">
                         </div>
                         <div class="form-group">
                             <label for="header_ru">Konferensiya vaqti</label>
-                            <input type="text" name="vaqti" class="form-control" id="header_ru">
+                            <input type="text" name="vaqti" required class="form-control" id="header_ru">
                         </div>
+
                         <div class="form-group">
-                            <label for="header_ru">Konfereniya haqida</label>
+                            <label for="header_ru" >Sho'balar</label>
                             <br>
-                           <textarea class="form-control"> </textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="header_ru">Sho'balar</label>
-                            <br>
-                           <textarea rows="10" class="form-control">На конференции будут обсуждаться следующие вопросы:
+                            <textarea rows="10" name="shobalar" class="form-control" required>На конференции будут обсуждаться следующие вопросы:
 1. Актуальные проблемы и решения телекоммуникационных систем и сетей.
 2. Современные тенденции и актуальные проблемы использования цифровых технологий в социально-экономических сферах.
 3. Технологии IoT, big data и технологии машинного обучения для их обработки.
 4. Современные проблемы и решения обеспечения информационной безопасности.
 5. Современные информационные технологии в образовании.
-</textarea>
+                            </textarea>
                         </div>
                         <div class="form-group">
                             <label for="header_ru">Shartlar</label>
 
-                            <textarea rows="15" class="form-control">Требования, предъявляемые к статьям:
+                            <textarea rows="15"  name="shartlar" class="form-control">Требования, предъявляемые к статьям:
  Статья должна быть не более 5 страниц в интервале 1,5 (параметры страницы; слева-2,5 см, сверху и снизу 2 см, справа 1,5 см, в формате А4, 210х297 мм), в редакторе Microsoft Word, Times New Roman, шрифт 14-размера.
  Заголовок должен быть написан заглавными буквами жирным шрифтом и помешен в середине страницы. На последующих строках имя автора, ученая степень или ученое звание, место работы в скобках, пишутся курсивом, раздел конференции, электронная почта, аннотация и ключевые слова в количестве 5-7 штук, на имени файла указывается номер раздела и фамилия автора. (Например: 1.Samandarov.doc)
  Авторы несут ответственность за достоверность информации, фактов и статистики, указанных в статье.
@@ -64,26 +60,18 @@
 </textarea>
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">Deadline</label>
+                            <label for="header_ru" >Deadline</label>
                             <br>
-                            <input type="text" class="form-control">
+                            <input type="text" name="deadline" class="form-control">
                         </div>
 
 
-
-
-
-
-
-
-                        <button type="submit" id="alert" class="btn btn-primary">Submit</button>
-                        <input type="reset" class="btn btn-danger" value="Очистить">
+                        <button type="submit" id="alert" class="btn btn-primary">Saqlash</button>
+                        <input type="reset" class="btn btn-danger" value="Tozalash">
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-
 
 @endsection
