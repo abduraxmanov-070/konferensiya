@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nomi');
             $table->string('vaqti');
             $table->string('deadline');
-            $table->longText('about');
+//            $table->longText('about');
             $table->longText('shobalar');
             $table->longText('shartlar');
             $table->timestamps();

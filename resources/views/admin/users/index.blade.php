@@ -17,26 +17,25 @@
                 </div>
                 <hr>
                 <div class="card-body">
-                    <table width="90%" class="table-bordered table-striped" id="mytable">
+                    <table width="100%" class="table-bordered table-striped" id="mytable">
                         <thead>
                         <tr>
-
+                            <th  scope="col">Id</th>
                             <th  scope="col">Nomi</th>
                             <th  scope="col">Vaqti</th>
-                            <th  scope="col">Konferensiya haqida</th>
-                            <th  scope="col">Sho'balar</th>
+                            <th  scope="col" class="col-2">Sho'balar</th>
                             <th  scope="col">Shartlar</th>
                             <th  scope="col">Deadline</th>
+                            <th  scope="col">Action</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($info as $inf)
+                        @foreach($info as $key => $inf)
                             <tr>
-
+                                <td >{{$key+1}}</td>
                                 <td >{{$inf->nomi}}</td>
                                 <td>{{$inf->vaqti}}</td>
-                                <td >{{$inf->about}}</td>
-                                <td>{{$inf->shobalar}}</td>
+                               <td>{{$inf->shobalar}}</td>
                                 <td >{{$inf->shartlar}}</td>
                                 <td>{{$inf->deadline}}</td>
 
