@@ -15,7 +15,16 @@ return new class extends Migration
     {
         Schema::create('konferensiyas', function (Blueprint $table) {
             $table->id();
+            $table->text('vazirliklar');
+            $table->text('filial');
+            $table->string('manzil');
+            $table->varchar('veb_sayt');
+            $table->varchar('telefon');
+            $table->text('kimga');
+            $table->varchar('email');
+            $table->longText('shot_raqam');
             $table->timestamps();
+
         });
     }
 

@@ -21,6 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Route::resource('konferensiya', \App\Http\Controllers\KanferensiyaController::class,);
 Route::resources([
     'info' => \App\Http\Controllers\InfoController::class,
     ]);

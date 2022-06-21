@@ -19,14 +19,12 @@
                             </ul>
                         </div>
                     @endif
-
-
                     <form action="{{route('admin.product.store')}}" method="POST" accept-charset="UTF-8"
                           enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group">
-                            <label for="header_ru">domen_name</label>
+                            <label for="header_ru"></label>
                             <input type="text" name="domen_name" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
@@ -49,12 +47,6 @@
                             <label for="header_ru">	annotation(izoh)</label>
                             <input type="text" name="annotation" class="form-control" id="header_ru" placeholder="номи">
                         </div>
-
-
-
-
-
-
                         <button type="submit" id="alert" class="btn btn-primary">Submit</button>
                         <input type="reset" class="btn btn-danger" value="Очистить">
                     </form>

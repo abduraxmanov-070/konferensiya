@@ -9,9 +9,14 @@
 {{--                        <p>Foydalanuvchilar</p>--}}
 {{--                    </a>--}}
 {{--                </li>--}}
+                <li class="nav-item {{  request()->routeIs('admin.konferensiya.index') ? 'active' : '' }}">
+                    <a href="{{route('konferensiya.index')}}">
+                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                        <p>Konferensiyalar</p>
+                    </a>
+                </li>
                 <li class="nav-item {{  request()->routeIs('info.index') ? 'active' : '' }}">
                     <a href="{{route('info.index')}}">
-                        <i class="fa fa-tasks" aria-hidden="true"></i>
                         <p>Info</p>
                     </a>
                 </li>
