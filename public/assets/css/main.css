@@ -1,0 +1,12 @@
+.lang-list{
+}
+.lang-list>li{
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+}
+.lang-list>li>a{
+    margin-right: 8px !important;
+    padding: 0px 0px !important;
+    font-weight: 600;
+}
