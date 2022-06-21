@@ -16,7 +16,7 @@
                         <li>
                             <div class="user-box">
                                 <div class="avatar-lg">
-                                    <img src="{{asset('assets/user.png')}}" alt="image profile" class="avatar-img rounded">
+                                    <img src="{{asset('/assets/images/user.png')}}" alt="image profile" class="avatar-img rounded">
                                 </div>
                                 <div class="u-text">
                                     <h4>{{Auth::user()->name}}</h4>

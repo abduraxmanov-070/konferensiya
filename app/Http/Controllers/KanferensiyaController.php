@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Konferensiya;
 use Illuminate\Http\Request;
 
 class KanferensiyaController extends Controller
@@ -13,7 +14,10 @@ class KanferensiyaController extends Controller
      */
     public function index()
     {
-        //
+        $konferensiya = Konferensiya::OrderBy('id','DESC')->get();
+        return view('admin.konfirensiya.index',[
+            'konferensiyalar' => $konferensiya,
+        ]);
     }
 
     /**
