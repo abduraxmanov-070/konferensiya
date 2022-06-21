@@ -72,7 +72,7 @@ class InfoController extends Controller
     public function update(Request $request, Info $info)
     {
         $info->update($request->all());
-
+        return redirect(route('info.index'));
     }
 
     /**

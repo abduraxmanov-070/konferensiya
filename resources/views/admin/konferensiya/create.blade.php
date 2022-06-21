@@ -4,7 +4,9 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-10"><h1 class="card-title">   </h1></div>
+                    <div class="col-10"><h1 class="card-title">
+                        Konferensiya yaratish
+                        </h1></div>
                 </div>
                 <hr>
                 <div class="card-body">
@@ -18,7 +20,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{route('konferensiya.store')}}" method="POST" accept-charset="UTF-8"
+                    <form action="{{route('konferensiya.store')}}" method="POST" accept-charset="UTF-8">
                         @csrf
                         <div class="form-group">
                             <label for="vazirliklar"> Vazirliklar </label>

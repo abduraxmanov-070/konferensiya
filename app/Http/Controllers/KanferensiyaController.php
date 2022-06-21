@@ -38,7 +38,6 @@ class KanferensiyaController extends Controller
      */
     public function store(Request $request, Konferensiya $konferensiya)
     {
-        dd(1);
         $konferensiya->create($request->all());
         return redirect()->route('konferensiya.index');
     }
@@ -60,9 +59,11 @@ class KanferensiyaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Konferensiya $konferensiya)
     {
-        //
+        return view('admin.konferensiya.edit' ,[
+        'konferensiya' => $konferensiya,
+        ]);
     }
 
     /**
@@ -72,9 +73,10 @@ class KanferensiyaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Konferensiya $konferensiya)
     {
-        //
+        $konferensiya->update($request->all());
+        return redirect()->route('konferensiya.index');
     }
 
     /**
@@ -83,8 +85,9 @@ class KanferensiyaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Konferensiya $konferensiya)
     {
-        //
+        $konferensiya->delete();
+        return redirect()->route('konferensiya.index');
     }
 }

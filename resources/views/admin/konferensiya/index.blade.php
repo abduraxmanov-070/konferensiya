@@ -28,6 +28,7 @@
                             <th>Kimga</th>
                             <th>Email</th>
                             <th>Hisob_raqam</th>
+                            <th>Amallar</th>
 
                         </tr>
 
@@ -37,41 +38,34 @@
 
                         @foreach($konferensiyalar as $konferensiya)
 
-                            <tr class="tr{{$konferensiya->id}}" @if( \Illuminate\Support\Carbon::now()->diffInDays( $product->to_domen) <= 30 ) style="background: red;"@endif >
+                            <tr>
 
 
                                 <td>
-                                    {{$konferensiya->Vazirliklar}}
+                                    {{$konferensiya->vazirliklar}}
                                 </td>
                                 <td>
-                                    {{$konferensiya->Filial}}
+                                    {{$konferensiya->filial}}
                                 </td>
                                 <td>
-                                    {{$konferensiya->Manzil}}
+                                    {{$konferensiya->manzil}}
                                 </td>
                                 <td>
-                                    {{$konferensiya->Veb-sayt}}
+                                    {{$konferensiya->veb_sayt}}
                                 </td>
                                 <td>
-                                    {{$konferensiya->Telefon_raqam}}
+                                    {{$konferensiya->telefon}}
                                 </td>
                                 <td>
-                                {{$konferensiya->Kimga}}
+                                {{$konferensiya->kimga}}
                                 </td>
                                 <td>
-                                {{$konferensiya->Email}}
+                                {{$konferensiya->email}}
                                 </td>
                                 <td>
-                                {{$konferensiya->Hisob_raqam}}
+                                {{$konferensiya->shot_raqam}}
                                 </td>
-                                <style>
-                                    .a{
-                                        opacity: 0;
-                                    }
-                                    .tr{{$konferensiya->id}}:hover .a{
-                                        opacity: 1 !important;
-                                    }
-                                </style>
+
                                     <td>
                                         <form action="{{ route('konferensiya.destroy',$konferensiya ->id) }}" method="POST">
                                             @csrf
