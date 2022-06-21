@@ -19,7 +19,7 @@
                                     <img src="{{asset('/assets/images/user.png')}}" alt="image profile" class="avatar-img rounded">
                                 </div>
                                 <div class="u-text">
-                                    <h4>{{Auth::user()->name}}</h4>
+                                    <h4>{{\Illuminate\Support\Facades\Auth::user()->name}}</h4>
 
                                 </div>
                             </div>

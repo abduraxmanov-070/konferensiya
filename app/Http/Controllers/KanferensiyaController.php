@@ -15,7 +15,7 @@ class KanferensiyaController extends Controller
     public function index()
     {
         $konferensiya = Konferensiya::OrderBy('id','DESC')->get();
-        return view('admin.konfirensiya.index',[
+        return view('admin.konferensiya.index',[
             'konferensiyalar' => $konferensiya,
         ]);
     }
@@ -27,7 +27,7 @@ class KanferensiyaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.konferensiya.create');
     }
 
     /**
@@ -36,9 +36,11 @@ class KanferensiyaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Konferensiya $konferensiya)
     {
-        //
+        dd(1);
+        $konferensiya->create($request->all());
+        return redirect()->route('konferensiya.index');
     }
 
     /**

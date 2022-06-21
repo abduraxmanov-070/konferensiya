@@ -18,10 +18,10 @@ return new class extends Migration
             $table->text('vazirliklar');
             $table->text('filial');
             $table->string('manzil');
-            $table->varchar('veb_sayt');
-            $table->varchar('telefon');
+            $table->string('veb_sayt');
+            $table->string('telefon');
             $table->text('kimga');
-            $table->varchar('email');
+            $table->string('email');
             $table->longText('shot_raqam');
             $table->timestamps();
 

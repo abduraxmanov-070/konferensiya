@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-9"><h1 class="card-title">  </h1></div>
                     <div class="col-md-1">
-                        <a class="btn btn-primary" href="{{route('admin.konferensiya.create')}}">
+                        <a class="btn btn-primary" href="{{route('konferensiya.create')}}">
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>
                             </span>
@@ -35,48 +35,50 @@
                         <tbody>
 
 
-                        @foreach($products as $product)
+                        @foreach($konferensiyalar as $konferensiya)
 
-                            <tr class="tr{{$product->id}}" @if( \Illuminate\Support\Carbon::now()->diffInDays( $product->to_domen) <= 30 ) style="background: red;"@endif >
+                            <tr class="tr{{$konferensiya->id}}" @if( \Illuminate\Support\Carbon::now()->diffInDays( $product->to_domen) <= 30 ) style="background: red;"@endif >
 
-
-                                <td>
-                                    {{$product->organization}}
-                                </td>
 
                                 <td>
-                                    {{$product->domen_name}}
-                                </td>
-
-                                <td>
-                                    {{Carbon\Carbon::parse($product->from_domen)->format("d-M Y")}}-yil
-{{--    $product->from_domen->format('Y-m-d')--}}
+                                    {{$konferensiya->Vazirliklar}}
                                 </td>
                                 <td>
-                                    {{Carbon\Carbon::parse($product->to_domen)->format("Y-M-d")}}
-{{--                                    {{$product->to_domen}}--}}
+                                    {{$konferensiya->Filial}}
                                 </td>
                                 <td>
-                                    {{$product->phone}}
+                                    {{$konferensiya->Manzil}}
                                 </td>
                                 <td>
-                                    {{$product->annotation}}
+                                    {{$konferensiya->Veb-sayt}}
+                                </td>
+                                <td>
+                                    {{$konferensiya->Telefon_raqam}}
+                                </td>
+                                <td>
+                                {{$konferensiya->Kimga}}
+                                </td>
+                                <td>
+                                {{$konferensiya->Email}}
+                                </td>
+                                <td>
+                                {{$konferensiya->Hisob_raqam}}
                                 </td>
                                 <style>
-                                    .dinayquy{
+                                    .a{
                                         opacity: 0;
                                     }
-                                    .tr{{$product->id}}:hover .dinayquy{
+                                    .tr{{$konferensiya->id}}:hover .a{
                                         opacity: 1 !important;
                                     }
                                 </style>
                                     <td>
-                                        <form action="{{ route('admin.product.destroy',$product ->id) }}" method="POST">
+                                        <form action="{{ route('konferensiya.destroy',$konferensiya ->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <div class="dinayquy">
+                                            <div class="a">
                                             <div class=" btn-group" role="group">
-                                            <a class="btn btn-warning btn-sm" href="{{ route('admin.product.edit',$product->id) }}">
+                                            <a class="btn btn-warning btn-sm" href="{{ route('konferensiya.edit',$konferensiya->id) }}">
                                     <span class="btn-label">
                                         <i class="fa fa-pen"></i>
                                     </span>
@@ -101,23 +103,5 @@
 
 
 <script src="{{asset('/assets/js/core/jquery.3.2.1.min.js')}}"></script>
-<script>
-    $(document).ready( function () {
-    $('#mytable').DataTable({
-        "language": {
-            "lengthMenu": "_MENU_",
-            "zeroRecords": " ",
-            "info": "_PAGE_ / _PAGES_",
-            "infoEmpty": " ",
-            "search":"Qidirish:",
-            "paginate": {
-                "first": "биринчи",
-                "previous": "олдинги",
-                "next": "кейинки",
-                "last": "охирги"
-            },
-        }});
-} );
-</script>
 @endsection
 
