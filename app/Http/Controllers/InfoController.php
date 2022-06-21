@@ -37,7 +37,7 @@ class InfoController extends Controller
     public function store(Request $request)
     {
         Info::create($request->all());
-        return redirect()->back()->with('Saqlandi');
+        return redirect(route('info.index'));
     }
 
     /**
@@ -59,7 +59,7 @@ class InfoController extends Controller
      */
     public function edit(Info $info)
     {
-        //
+        return view('admin.users.edit',compact('info'));
     }
 
     /**
@@ -71,7 +71,8 @@ class InfoController extends Controller
      */
     public function update(Request $request, Info $info)
     {
-        //
+        $info->update($request->all());
+
     }
 
     /**
@@ -82,6 +83,7 @@ class InfoController extends Controller
      */
     public function destroy(Info $info)
     {
-        //
+        $info->delete();
+        return redirect(route('info.index'));
     }
 }

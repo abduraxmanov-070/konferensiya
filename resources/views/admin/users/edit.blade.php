@@ -4,14 +4,14 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-10"><h1 class="card-title">Изменить контакты</h1></div>
+                    <div class="col-10"><h1 class="card-title">Konferensiya</h1></div>
                 </div>
                 <hr>
                 <div class="card-body">
 
                     @if ($errors->any())
                         <div class="alert alert-danger">
-                            <strong>Ой!</strong> С вашим вводом возникли некоторые проблемы.<br><br>
+                            <strong>Whoops!</strong> Nimadir xato ketdi.<br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
@@ -21,36 +21,40 @@
                     @endif
 
 
-                    <form action="{{route('admin.users.update',$user)}}" method="POST" accept-charset="UTF-8">
+                    <form action="{{route('info.update',$info->id)}}" method="POST" accept-charset="UTF-8">
                         @csrf
                         @method('PUT')
-                        <div class="form-group">
-                            <label for="header_ru">tuman:</label>
 
-                            <select class="custom-select" name="role" id="">
-                                @foreach($regions as $region)
-                                    <option class="form-control" value="{{$region->id}}">{{$region->name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    <div class="form-group">
-                        <label for="name">Имя</label>
-                        <input type="text" name="name" class="form-control" id="name" placeholder="Имя" value="{{$user->name}}">
-                    </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" name="email" class="form-control" id="email" placeholder="Email" value="{{$user->email}}">
+                            <label for="header_ru">Nomi</label>
+                            <input type="text" name="nomi"  required class="form-control" id="header_ru" value="{{$info-> nomi}}">
                         </div>
-                    <div class="form-group">
-                        <label for="pwd">Пароль</label>
-                        <input type="password" name="password" class="form-control" id="pwd">
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd_confirm">Повторите пароль</label>
-                        <input type="password" name="password_confirmation" class="form-control" id="pwd_confirm">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Сохранить</button>
-                    <input type="reset" class="btn btn-danger" value="Очистить">
+                        <div class="form-group">
+                            <label for="header_ru">Konferensiya vaqti</label>
+                            <input type="text" name="vaqti" required class="form-control" id="header_ru"  value="{{$info->vaqti}}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="header_ru">Sho'balar</label>
+                            <br>
+                            <textarea rows="10" name="shobalar" class="form-control" required> {{$info->shobalar}}
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="header_ru">Shartlar</label>
+
+                            <textarea rows="15"  name="shartlar" class="form-control">{{$info->shartlar}}
+                          </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="header_ru" >Deadline</label>
+                            <br>
+                            <input type="text" name="deadline" class="form-control"  value="{{$info->deadline}}">
+                        </div>
+
+
+                        <button type="submit" id="alert" class="btn btn-primary">Saqlash</button>
+                        <input type="reset" class="btn btn-danger" value="Tozalash">
                     </form>
                 </div>
             </div>
