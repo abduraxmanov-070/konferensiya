@@ -20,17 +20,21 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{route('konferensiya.store')}}" method="POST" accept-charset="UTF-8">
+                    <form action="{{route('konferensiya.store')}}" method="POST" accept-charset="UTF-8"
+                    enctype="multipart/form-data">
                         @csrf
+                        <div class="form-group">
+                            <label for="logo"> Logo </label>
+                            <input  type="file" name="logo" id="logo" class="form-control" required />
+                        </div>
                         <div class="form-group">
                             <label for="vazirliklar"> Vazirliklar </label>
                             <textarea name="vazirliklar" id="vazirliklar" class="form-control" rows="6" required></textarea>
-{{--                            <input type="text" name="vazirliklar" class="form-control" placeholder="">--}}
                         </div>
                         <div class="form-group">
                             <label for="filial"> Filial</label>
                             <textarea name="filial" id=filial"" class="form-control" rows="4" required></textarea>
-{{--                            <input type="text" name="organization" class="form-control" placeholder="">--}}
+
                         </div>
                         <div class="form-group">
                             <label for="manzil"> Manzil </label>

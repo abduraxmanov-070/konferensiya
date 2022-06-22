@@ -20,13 +20,16 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{route('konferensiya.update', $konferensiya->id)}}" method="POST" accept-charset="UTF-8">
+                    <form action="{{route('konferensiya.update', $konferensiya->id)}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
+                            <label for="logo"> Logo </label>
+                            <input  type="file" name="logo" id="logo" class="form-control"/>
+                        </div>
+                        <div class="form-group">
                             <label for="vazirliklar"> Vazirliklar </label>
                             <textarea name="vazirliklar" id="vazirliklar" class="form-control" rows="6" required>{{ $konferensiya['vazirliklar'] }}</textarea>
-                            {{--                            <input type="text" name="vazirliklar" class="form-control" placeholder="">--}}
                         </div>
                         <div class="form-group">
                             <label for="filial"> Filial</label>

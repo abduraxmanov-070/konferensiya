@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Konferensiya;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class KanferensiyaController extends Controller
 {
@@ -38,7 +39,20 @@ class KanferensiyaController extends Controller
      */
     public function store(Request $request, Konferensiya $konferensiya)
     {
-        $konferensiya->create($request->all());
+        $img = time().'.jpg';
+        $path = 'assets/img/logo/';
+        $request->logo->move($path, $img);
+        $konferensiya->create([
+            'logo' => $img,
+            'vazirliklar' => $request['vazirliklar'],
+            'filial' => $request['filial'],
+            'manzil' => $request['manzil'],
+            'veb_sayt' => $request['veb_sayt'],
+            'telefon' => $request['telefon'],
+            'kimga' => $request['kimga'],
+            'email' => $request['email'],
+            'shot_raqam' => $request['shot_raqam'],
+        ]);
         return redirect()->route('konferensiya.index');
     }
 
@@ -75,7 +89,25 @@ class KanferensiyaController extends Controller
      */
     public function update(Request $request, Konferensiya $konferensiya)
     {
-        $konferensiya->update($request->all());
+        if ($request->logo == NULL) $img = $konferensiya->logo;
+        else {
+            File::delete(public_path('assets/img/logo/'.$konferensiya->log));
+            $img = time().'.jpg';
+            $path = 'assets/img/logo/';
+            $request->logo->move($path, $img);
+        }
+
+        $konferensiya->update([
+            'logo' => $img,
+            'vazirliklar' => $request['vazirliklar'],
+            'filial' => $request['filial'],
+            'manzil' => $request['manzil'],
+            'veb_sayt' => $request['veb_sayt'],
+            'telefon' => $request['telefon'],
+            'kimga' => $request['kimga'],
+            'email' => $request['email'],
+            'shot_raqam' => $request['shot_raqam'],
+        ]);
         return redirect()->route('konferensiya.index');
     }
 
@@ -87,6 +119,7 @@ class KanferensiyaController extends Controller
      */
     public function destroy(Konferensiya $konferensiya)
     {
+        File::delete(public_path('assets/img/logo/'.$konferensiya->log));
         $konferensiya->delete();
         return redirect()->route('konferensiya.index');
     }

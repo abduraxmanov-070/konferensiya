@@ -413,7 +413,7 @@
     <div class="row">
         <div class="p-1  bg-success" style="width: 30%;">
             <div class="bg-white d-flex justify-center p-1">
-                <img src="{{ asset('/logo.png') }}" alt="" class="w-50">
+                <img src="{{ asset('assets/img/logo/'.$konferensiya->logo) }}" alt="" class="w-50">
             </div>
         </div>
         <div class="p-1 bg-success" style="width: 70%;">

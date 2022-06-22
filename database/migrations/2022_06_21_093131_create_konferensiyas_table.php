@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('konferensiyas', function (Blueprint $table) {
             $table->id();
+            $table->string('logo');
             $table->text('vazirliklar');
             $table->text('filial');
             $table->string('manzil');

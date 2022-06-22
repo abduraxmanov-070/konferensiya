@@ -21,6 +21,7 @@
                         <thead>
                         <tr>
                             <th class="col">Id</th>
+                            <th class="col">Logo</th>
                             <th class="col">Vazirliklar</th>
                             <th class="col">Filial </th>
                             <th class="col">Manzil</th>
@@ -42,6 +43,9 @@
 
                                 <td>
                                     {{$key+1}}
+                                </td>
+                                <td>
+                                    <img src="{{ asset('assets/img/logo/'.$konferensiya->logo) }}" alt="logo" style="height: 100px;">
                                 </td>
                                 <td>
                                     {{$konferensiya->vazirliklar}}
