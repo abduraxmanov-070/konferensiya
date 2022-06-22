@@ -408,14 +408,15 @@
 </head>
 <body>
 <div class="container mt-3">
-    <a href="/download" class="btn btn-primary">Yuklab Olish</a>
+{{--    <a href="/download" class="btn btn-primary">Yuklab Olish</a>--}}
+    <button onclick="download()" class="btn btn-primary">Yuklab Olish</button>
     <div class="row">
-        <div class="w-25 p-1 bg-success">
+        <div class="p-1  bg-success" style="width: 30%;">
             <div class="bg-white d-flex justify-center p-1">
                 <img src="{{ asset('/logo.png') }}" alt="" class="w-50">
             </div>
         </div>
-        <div class="w-75 p-1 bg-success">
+        <div class="p-1 bg-success" style="width: 70%;">
             <div class="bg-white d-flex text-center p-1 align-items-center h-100">
                 <h2 class="fw-bold">
                     {{ $info['nomi'] }} <br>
@@ -426,7 +427,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="w-25 p-3 bg-success text-center">
+        <div class="p-3 bg-success text-center" style="width: 30%;">
             <p>МИНИСТЕРСТВО ВЫСШЕГО И СРЕДНЕ-СПЕЦИАЛЬНОГО ОБРАЗОВАНИЯ РЕСПУБЛИКИ УЗБЕКИСТАН</p>
             <p>{{ $konferensiya['vazirliklar'] }}</p>
 {{--            <p>МИНИСТЕРСТВО ПО РАЗВИТИЮ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И КОММУНИКАЦИЙ РЕСПУБЛИКИ УЗБЕКИСТАН</p>--}}
@@ -455,7 +456,7 @@
 {{--                М.Машарипов--}}
                 E-mail: <a href="">{{ $konferensiya['email'] }}</a>
             </p>
-            <p class="text-white">
+            <p class="">
                 ДЕНЕЖНЫЕ ПЕРЕВОДЫ <br>
                 {{ $konferensiya['shot_raqam'] }}
 {{--                Ўзбекистон Республикаси Молия вазирлиги Ягона Ғазначилиги--}}
@@ -467,7 +468,7 @@
 {{--                МФО 00014 СТИР 201122919--}}
             </p>
         </div>
-        <div class="w-75 p-1 bg-success">
+        <div class="p-1 bg-success" style="width: 70%;">
             <div class="bg-white d-flex text-justify p-2 align-items-center h-100 flex-column">
                <p>
                    Приглашаем Вас на международную научно-практическую конференцию проводимую
@@ -494,4 +495,11 @@
     </div>
 </div>
 </body>
+<script>
+    function download(){
+        let x = document.getElementsByClassName('btn')[0];
+        x.style.display = 'none';
+        window.print();
+    }
+</script>
 </html>
