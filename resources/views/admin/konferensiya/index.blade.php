@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-9"><h1 class="card-title">  </h1></div>
+                    <div class="col-9"><h1 class="card-title"> Konferensiya </h1></div>
                     <div class="col-md-1">
                         <a class="btn btn-primary" href="{{route('konferensiya.create')}}">
                             <span class="btn-label">
@@ -17,30 +17,32 @@
                 </div>
                 <hr>
                 <div class="">
-                    <table width="90%" class="table-bordered table-striped" id="mytable">
+                    <table  class="table-bordered w-100 table-striped" id="mytable">
                         <thead>
-                        <tr >
-                            <th>Vazirliklar</th>
-                            <th>Filial </th>
-                            <th>Manzil</th>
-                            <th>Veb-sayt</th>
-                            <th>Telefon raqam</th>
-                            <th>Kimga</th>
-                            <th>Email</th>
-                            <th>Hisob_raqam</th>
-                            <th>Amallar</th>
-
+                        <tr>
+                            <th class="col">Id</th>
+                            <th class="col">Vazirliklar</th>
+                            <th class="col">Filial </th>
+                            <th class="col">Manzil</th>
+                            <th class="col">Veb-sayt</th>
+                            <th class="col">Telefon raqam</th>
+                            <th class="col">Kimga</th>
+                            <th class="col">Email</th>
+                            <th class="col">Hisob_raqam</th>
+                            <th class="col">Amallar</th>
                         </tr>
 
                         </thead>
                         <tbody>
 
 
-                        @foreach($konferensiyalar as $konferensiya)
+                        @foreach($konferensiyalar as $key => $konferensiya)
 
                             <tr>
 
-
+                                <td>
+                                    {{$key+1}}
+                                </td>
                                 <td>
                                     {{$konferensiya->vazirliklar}}
                                 </td>

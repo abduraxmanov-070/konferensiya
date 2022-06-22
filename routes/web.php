@@ -14,10 +14,8 @@ use App\Http\Controllers\UsersController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/',[\App\Http\Controllers\HomeController::class, 'welcome']);
+Route::get('/download', [\App\Http\Controllers\HomeController::class, 'download']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);

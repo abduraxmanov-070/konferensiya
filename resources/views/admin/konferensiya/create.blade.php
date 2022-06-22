@@ -24,41 +24,42 @@
                         @csrf
                         <div class="form-group">
                             <label for="vazirliklar"> Vazirliklar </label>
-                            <textarea name="vazirliklar" id="vazirliklar" class="form-control" rows="6"></textarea>
+                            <textarea name="vazirliklar" id="vazirliklar" class="form-control" rows="6" required></textarea>
 {{--                            <input type="text" name="vazirliklar" class="form-control" placeholder="">--}}
                         </div>
                         <div class="form-group">
                             <label for="filial"> Filial</label>
-                            <textarea name="filial" id=filial"" class="form-control" rows="4"></textarea>
+                            <textarea name="filial" id=filial"" class="form-control" rows="4" required></textarea>
 {{--                            <input type="text" name="organization" class="form-control" placeholder="">--}}
                         </div>
                         <div class="form-group">
                             <label for="manzil"> Manzil </label>
-                            <textarea name="manzil" id="manzil" class="form-control" rows="4"></textarea>
+                            <textarea name="manzil" id="manzil" class="form-control" rows="4" required></textarea>
 {{--                            <input type="tel" name="phone" pattern="{0,9}[9]" class="form-control"  placeholder="">--}}
                         </div>
                         <div class="form-group">
                             <label for="veb_sayt"> Veb-sayt </label>
-                            <input type="text" name="veb_sayt" class="form-control" placeholder="">
+                            <input type="text" name="veb_sayt" class="form-control" placeholder="" required>
                         </div>
                         <div class="form-group">
                             <label for="telefon"> Telefon_raqami </label>
-                            <input type="text" name="telefon" class="form-control"  placeholder="">
+                            <input type="text" name="telefon" class="form-control"  placeholder="" required>
                         </div>
                         <div class="form-group">
                             <label for="kimga">	Kimga </label>
-                            <input type="text" name="kimga" class="form-control" id="kimga">
+                            <input type="text" name="kimga" class="form-control" id="kimga" required>
                         </div>
                         <div class="form-group">
                             <label for="email">	Email </label>
-                            <input type="text" name="email" class="form-control" id="email">
+                            <input type="text" name="email" class="form-control" id="email" required>
                         </div>
                         <div class="form-group">
                             <label for="shot_raqam"> Hisob_raqam </label>
-                            <input type="text" name="shot_raqam" class="form-control" id="hisob_raqam">
+                            <textarea name="shot_raqam" id="shot_raqam" class="form-control" rows="4"></textarea>
+{{--                            <input type="text" name="shot_raqam"  id="hisob_raqam" required>--}}
                         </div>
                         <button type="submit" id="alert" class="btn btn-primary">Submit</button>
-{{--                        <input type="reset" class="btn btn-danger" value="Очистить">--}}
+                        <input type="reset" class="btn btn-danger" value="Очистить">
                     </form>
                 </div>
             </div>
