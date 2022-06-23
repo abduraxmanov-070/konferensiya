@@ -421,22 +421,22 @@
                 <h2 class="fw-bold">
                     {{ $info['nomi'] }} <br>
 {{--                    “ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ, СЕТИ И ТЕЛЕКОММУНИКАЦИИ” ITNT-2022--}}
-                    МЕЖДУНАРОДНАЯ НАУЧНО-ПРАКТИЧЕСКАЯ КОНФЕРЕНЦИЯ
+                    XALQARO ILMIY-AMALIY KONFERENSIYA
                 </h2>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="p-3 bg-success text-center" style="width: 30%;">
-            <p>МИНИСТЕРСТВО ВЫСШЕГО И СРЕДНЕ-СПЕЦИАЛЬНОГО ОБРАЗОВАНИЯ РЕСПУБЛИКИ УЗБЕКИСТАН</p>
+            <p>O‘ZBEKISTON RESPUBLIKASI OLIY VA O‘RTA MAXSUS TA’LIM VAZIRLIGI</p>
             <p>{{ $konferensiya['vazirliklar'] }}</p>
 {{--            <p>МИНИСТЕРСТВО ПО РАЗВИТИЮ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И КОММУНИКАЦИЙ РЕСПУБЛИКИ УЗБЕКИСТАН</p>--}}
             <p>{{ $konferensiya['filial'] }}</p>
 {{--            <p>УРГЕНЧСКИЙ ФИЛИАЛ ТУИТ ИМЕНИ МУХАММАДА АЛ-ХОРЕЗМИ</p>--}}
-            <p>ИНФОРМАЦИОННОЕ ПИСЬМО
+            <p>MA'LUMOT POCHTA
             <div class="border-top my-3"></div>
             <p>
-                {{ $info['vaqti'] }} проводится международная научно-практическая конференция
+                {{ $info['vaqti'] }} sanasida xalqaro ilmiy-amaliy konferensiya o‘tkazilmoqda
                 {{ $info['nomi'] }}
 {{--                “Информационные технологии, сети и телекоммуникации”.--}}
             </p>
@@ -446,10 +446,10 @@
 {{--                Ургенчский филиал Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми,--}}
 {{--                г. Ургенч ул. Ал-Хорезми 110.--}}
 {{--                Тел: +998622246134--}}
-                Web сайт конференции: <a href="{{ $konferensiya['veb_sayt'] }}">{{ $konferensiya['veb_sayt'] }}</a>
+                Konferensiya veb-sayti: <a href="{{ $konferensiya['veb_sayt'] }}">{{ $konferensiya['veb_sayt'] }}</a>
             </p>
             <p>
-                ТЕЛЕФОН ДЛЯ ИНФОРМАЦИИ: <br>
+                MA'LUMOT UCHUN TELEFON: <br>
                 {{ $konferensiya['telefon'] }} <br>
 {{--                998972116496--}}
                 {{ $konferensiya['kimga'] }} <br>
@@ -457,7 +457,7 @@
                 E-mail: <a href="">{{ $konferensiya['email'] }}</a>
             </p>
             <p class="">
-                ДЕНЕЖНЫЕ ПЕРЕВОДЫ <br>
+                Pul O'tkazmalari uchun: <br>
                 {{ $konferensiya['shot_raqam'] }}
 {{--                Ўзбекистон Республикаси Молия вазирлиги Ягона Ғазначилиги--}}
 {{--                ш/ҳ 400910860334017094100078002--}}
@@ -471,11 +471,11 @@
         <div class="p-1 bg-success" style="width: 70%;">
             <div class="bg-white d-flex text-justify p-2 align-items-center h-100 flex-column">
                <p>
-                   Приглашаем Вас на международную научно-практическую конференцию проводимую
-                   Ургенчским филиалом Ташкентского университета информационных технологий имени
-                   Мухаммада ал-Хорезми совместно с Министерством Высшего и средно-специального
-                   образования Республики Узбекистан и Министерством по развитию иинформационных
-                   технологий и коммуникаций Республики Узбекистан
+                   Sizni xalqaro ilmiy-amaliy anjumanga taklif qilamiz
+                   nomidagi Toshkent axborot texnologiyalari universiteti Urganch filiali
+                   Muhammad al-Xorazmiy Oliy va oʻrta maxsus vazirligi bilan birgalikda
+                   Oʻzbekiston Respublikasi Taʼlim va Taraqqiyot va axborot vazirligi
+                   O‘zbekiston Respublikasi texnologiyalari va kommunikatsiyalari
                    {{ $info['vaqti'] }} года на тему
                    {{ $info['nomi'] }}
 {{--                   “Информационные технологии, сети и телекоммуникации” ITNT-2022.--}}
@@ -487,9 +487,9 @@
                     {{ $info['shartlar'] }}
                 </p>
                 <p class="fw-bold">
-                    Срок подачи документов до {{ $info['deadline'] }} года в электронном варианте на узбекском, русском или английском языках.
+                    Hujjatlarni topshirishning oxirgi muddati {{ $info['deadline'] }} -yil elektron versiyada o'zbek, rus yoki ingliz tillarida.
                 </p>
-                <p> Статьи должны бить отправлены на электронный адрес <a href="" class="fw-bold text-black">{{ $konferensiya['email'] }}</a> </p>
+                <p> Maqolalar elektron pochta manziliga yuborilishi kerak <a href="" class="fw-bold text-black">{{ $konferensiya['email'] }}</a> </p>
             </div>
         </div>
     </div>

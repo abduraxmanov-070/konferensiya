@@ -11,7 +11,7 @@
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>
                             </span>
-                            Qoshish
+                            Qo'shish
                         </a>
                     </div>
                 </div>
@@ -20,17 +20,17 @@
                     <table  class="table-bordered w-100 table-striped" id="mytable">
                         <thead>
                         <tr>
-                            <th class="col">Id</th>
-                            <th class="col">Logo</th>
-                            <th class="col">Vazirliklar</th>
-                            <th class="col">Filial </th>
-                            <th class="col">Manzil</th>
-                            <th class="col">Veb-sayt</th>
-                            <th class="col">Telefon raqam</th>
-                            <th class="col">Kimga</th>
-                            <th class="col">Email</th>
-                            <th class="col">Hisob_raqam</th>
-                            <th class="col">Amallar</th>
+                            <th scope="col">Id</th>
+                            <th scope="col">Logo</th>
+                            <th scope="col">Vazirliklar</th>
+                            <th scope="col">Filial </th>
+                            <th scope="col">Manzil</th>
+                            <th scope="col">Veb-sayt</th>
+                            <th scope="col">Telefon raqam</th>
+                            <th scope="col">Kimga</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Hisob_raqam</th>
+                            <th scope="col">Amallar</th>
                         </tr>
 
                         </thead>
