@@ -37,30 +37,30 @@
                         <div class="form-group">
                             <label for="header_ru" >Sho'balar</label>
                             <br>
-                            <textarea rows="10" name="shobalar" class="form-control" required>На конференции будут обсуждаться следующие вопросы:
-1. Актуальные проблемы и решения телекоммуникационных систем и сетей.
-2. Современные тенденции и актуальные проблемы использования цифровых технологий в социально-экономических сферах.
-3. Технологии IoT, big data и технологии машинного обучения для их обработки.
-4. Современные проблемы и решения обеспечения информационной безопасности.
-5. Современные информационные технологии в образовании.
+                            <textarea rows="10" name="shobalar" class="form-control" required>Konferensiyada quyidagi masalalar muhokama qilinadi:
+1. Telekommunikatsiya tizimlari va tarmoqlarining dolzarb muammolari va yechimlari.
+2. Ijtimoiy-iqtisodiy sohalarda raqamli texnologiyalardan foydalanishning zamonaviy tendentsiyalari va dolzarb muammolari.
+3. IT texnologiyalari, katta ma'lumotlar va ularni qayta ishlash uchun mashinani o'rganish texnologiyalari.
+4. Axborot xavfsizligini ta'minlashning zamonaviy muammolari va yechimlari.
+5. Ta'limda zamonaviy axborot texnologiyalari.
                             </textarea>
                         </div>
                         <div class="form-group">
                             <label for="header_ru">Shartlar</label>
 
-                            <textarea rows="15"  name="shartlar" class="form-control">Требования, предъявляемые к статьям:
- Статья должна быть не более 5 страниц в интервале 1,5 (параметры страницы; слева-2,5 см, сверху и снизу 2 см, справа 1,5 см, в формате А4, 210х297 мм), в редакторе Microsoft Word, Times New Roman, шрифт 14-размера.
- Заголовок должен быть написан заглавными буквами жирным шрифтом и помешен в середине страницы. На последующих строках имя автора, ученая степень или ученое звание, место работы в скобках, пишутся курсивом, раздел конференции, электронная почта, аннотация и ключевые слова в количестве 5-7 штук, на имени файла указывается номер раздела и фамилия автора. (Например: 1.Samandarov.doc)
- Авторы несут ответственность за достоверность информации, фактов и статистики, указанных в статье.
- В статье должны быть четко указаны источники таблиц (чертежи и рисунки), к сокращенным словам должны быть предоставлены комментарии (примечания).
- Ссылки в статье обозначаются как «[1]». Литература, использованная в статье, должна быть представлена в соответствии с последовательностью использования.
- Статьи несоответствующие вышеуказанным требованиям, не будут рассматриваться Оргкомитетом и не будут включены в сборник.
-Включенные в сборник статьи и тезисы индексируются в базе google scholar.
-За каждую принятую тезис взимается оргвзнос в размере 50 000 сум.
+                            <textarea rows="15"  name="shartlar" class="form-control">Maqolaga qo'yiladigan talablar:
+ Maqola 1,5 oraliqda 5 sahifadan oshmasligi kerak (sahifa sozlamalari; chapdan-2,5 sm, yuqoridan va pastdan 2 sm, o‘ngdan 1,5 sm, A4 formatda, 210x297 mm), Microsoft Word, Times New Roman, 14- o'lchamdagi shrift.
+ Sarlavha qalin bosh harflar bilan yozilishi va sahifaning o'rtasiga joylashtirilishi kerak. Keyingi qatorlarda muallifning ismi-sharifi, ilmiy darajasi yoki ilmiy unvoni, qavs ichida ish joyi kursiv bilan, konferensiya bo‘limi, elektron pochta manzili, izoh va kalit so‘zlar 5-7 dona hajmda, bo‘lim raqami yoziladi. fayl nomida esa muallifning familiyasi ko'rsatilgan. (Masalan: 1.Samandarov.doc)
+ Maqolada ko'rsatilgan ma'lumotlar, faktlar va statistik ma'lumotlarning to'g'riligi uchun mualliflar javobgardir.
+ Maqolada jadvallarning manbalari (chizmalar va chizmalar) aniq ko'rsatilishi kerak, qisqartirilgan so'zlarga sharhlar (eslatmalar) berilishi kerak.
+ Maqolada havolalar "[1]" sifatida ko'rsatilgan. Maqolada foydalanilgan adabiyotlar foydalanish ketma-ketligiga muvofiq taqdim etilishi kerak.
+ Yuqoridagi talablarga javob bermaydigan maqolalar tashkiliy qo‘mita tomonidan ko‘rib chiqilmaydi va to‘plamga kiritilmaydi.
+To'plamga kiritilgan maqolalar va tezislar Google scholar ma'lumotlar bazasida indekslanadi.
+Har bir qabul qilingan referat uchun 50 000 so‘m ro‘yxatdan o‘tish to‘lovi undiriladi.
 </textarea>
                         </div>
                         <div class="form-group">
-                            <label for="header_ru" >Deadline</label>
+                            <label for="header_ru" >Hujjat topshirishning ohirgi muddati</label>
                             <br>
                             <input type="text" name="deadline" class="form-control">
                         </div>

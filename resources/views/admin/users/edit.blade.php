@@ -47,7 +47,7 @@
                           </textarea>
                         </div>
                         <div class="form-group">
-                            <label for="header_ru" >Deadline</label>
+                            <label for="header_ru">Hujjat topshirishning ohirgi muddati</label>
                             <br>
                             <input type="text" name="deadline" class="form-control"  value="{{$info->deadline}}">
                         </div>

@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-9"><h1 class="card-title">Info</h1></div>
+                    <div class="col-9"><h1 class="card-title">Informatsiya</h1></div>
                     <div class="col-md-1">
                         <a class="btn btn-primary" href="{{route('info.create')}}">
                             <span class="btn-label">
@@ -25,8 +25,8 @@
                             <th  scope="col">Vaqti</th>
                             <th  scope="col" class="col-2">Sho'balar</th>
                             <th  scope="col">Shartlar</th>
-                            <th  scope="col">Deadline</th>
-                            <th  scope="col">Action</th>
+                            <th  scope="col">Ohirgi muddat</th>
+                            <th  scope="col">Amallar</th>
                         </tr>
                         </thead>
                         <tbody>

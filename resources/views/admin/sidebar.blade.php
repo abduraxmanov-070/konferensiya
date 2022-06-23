@@ -18,7 +18,7 @@
                 <li class="nav-item {{  request()->routeIs('info.index') ? 'active' : '' }}">
                     <a href="{{route('info.index')}}">
                         <i class="fa fa-tasks" aria-hidden="true"></i>
-                        <p>Info</p>
+                        <p>Informatsiyalar</p>
                     </a>
                 </li>
             </ul>

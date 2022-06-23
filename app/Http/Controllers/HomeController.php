@@ -6,6 +6,7 @@ use App\Models\Info;
 use App\Models\Konferensiya;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -26,13 +27,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $id = Auth::id();
+//        dd($id);
+        if ($id == NULL) return redirect()->route('login');
+        else   return view('admin.dashboard');
     }
 
     public function welcome()
     {
         $konferensiya = Konferensiya::all()->last();
         $info = Info::all()->last();
+//        dd($konferensiya);
         return view('welcome', [
             'konferensiya' => $konferensiya,
             'info' => $info
