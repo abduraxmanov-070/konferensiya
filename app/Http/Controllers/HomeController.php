@@ -37,10 +37,16 @@ class HomeController extends Controller
     {
         $konferensiya = Konferensiya::all()->last();
         $info = Info::all()->last();
-//        dd($konferensiya);
+        if ($konferensiya == NULL) $k_b = false;
+        else $k_b = true;
+        if ($info == NULL) $i_b = false;
+        else $i_b = true;
+//        dd($k_b);
         return view('welcome', [
             'konferensiya' => $konferensiya,
-            'info' => $info
+            'info' => $info,
+            'kon_bool' => $k_b,
+            'info_bool' => $i_b,
         ]);
     }
 

@@ -21,7 +21,7 @@
                         <thead>
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Logo</th>
+{{--                            <th scope="col">Logo</th>--}}
                             <th scope="col">Vazirliklar</th>
                             <th scope="col">Filial </th>
                             <th scope="col">Manzil</th>

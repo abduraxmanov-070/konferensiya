@@ -395,32 +395,38 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        *{
+        * {
             font-family: "DejaVu Sans", sans-serif;
         }
+
         body {
             font-family: 'Nunito', sans-serif;
         }
-        a{
+
+        a {
             text-decoration: none;
         }
     </style>
 </head>
 <body>
 <div class="container mt-3">
-{{--    <a href="/download" class="btn btn-primary">Yuklab Olish</a>--}}
+    {{--    <a href="/download" class="btn btn-primary">Yuklab Olish</a>--}}
     <button onclick="download()" class="btn btn-primary">Yuklab Olish</button>
     <div class="row">
         <div class="p-1  bg-success" style="width: 30%;">
             <div class="bg-white d-flex justify-center p-1">
-                <img src="{{ asset('assets/img/logo/'.$konferensiya->logo) }}" alt="" class="w-50">
+                @if($kon_bool)
+                    <img src="{{ asset('assets/img/logo/'.$konferensiya->logo) }}" alt="" class="w-50">
+                @endif
             </div>
         </div>
         <div class="p-1 bg-success" style="width: 70%;">
             <div class="bg-white d-flex text-center p-1 align-items-center h-100">
                 <h2 class="fw-bold">
-                    {{ $info['nomi'] }} <br>
-{{--                    “ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ, СЕТИ И ТЕЛЕКОММУНИКАЦИИ” ITNT-2022--}}
+                    @if($info_bool)
+                        {{ $info['nomi'] }} <br>
+                    @endif
+                    {{--                    “ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ, СЕТИ И ТЕЛЕКОММУНИКАЦИИ” ITNT-2022--}}
                     XALQARO ILMIY-AMALIY KONFERENSIYA
                 </h2>
             </div>
@@ -429,74 +435,116 @@
     <div class="row">
         <div class="p-3 bg-success text-center" style="width: 30%;">
             <p>O‘ZBEKISTON RESPUBLIKASI OLIY VA O‘RTA MAXSUS TA’LIM VAZIRLIGI</p>
-            <p>{{ $konferensiya['vazirliklar'] }}</p>
-{{--            <p>МИНИСТЕРСТВО ПО РАЗВИТИЮ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И КОММУНИКАЦИЙ РЕСПУБЛИКИ УЗБЕКИСТАН</p>--}}
-            <p>{{ $konferensiya['filial'] }}</p>
-{{--            <p>УРГЕНЧСКИЙ ФИЛИАЛ ТУИТ ИМЕНИ МУХАММАДА АЛ-ХОРЕЗМИ</p>--}}
+            @if($kon_bool)
+                <p>{{ $konferensiya['vazirliklar'] }}</p>
+            @endif
+            {{--            <p>МИНИСТЕРСТВО ПО РАЗВИТИЮ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И КОММУНИКАЦИЙ РЕСПУБЛИКИ УЗБЕКИСТАН</p>--}}
+            @if($kon_bool)
+                <p>{{ $konferensiya['filial'] }}</p>
+            @endif
+            {{--            <p>УРГЕНЧСКИЙ ФИЛИАЛ ТУИТ ИМЕНИ МУХАММАДА АЛ-ХОРЕЗМИ</p>--}}
             <p>MA'LUMOT POCHTA
             <div class="border-top my-3"></div>
             <p>
-                {{ $info['vaqti'] }} sanasida xalqaro ilmiy-amaliy konferensiya o‘tkazilmoqda
-                {{ $info['nomi'] }}
-{{--                “Информационные технологии, сети и телекоммуникации”.--}}
+                @if($info_bool)
+                    {{ $info['vaqti'] }}
+                @endif sanasida xalqaro ilmiy-amaliy konferensiya o‘tkazilmoqda
+                @if($info_bool)
+                    {{ $info['nomi'] }}
+                @endif
+                {{--                “Информационные технологии, сети и телекоммуникации”.--}}
             </p>
             <p>
-                {{ $konferensiya['manzil'] }}
-{{--                Адрес организационного комитета:--}}
-{{--                Ургенчский филиал Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми,--}}
-{{--                г. Ургенч ул. Ал-Хорезми 110.--}}
-{{--                Тел: +998622246134--}}
-                Konferensiya veb-sayti: <a href="{{ $konferensiya['veb_sayt'] }}">{{ $konferensiya['veb_sayt'] }}</a>
+                @if($kon_bool)
+                    {{ $konferensiya['manzil'] }}
+                @endif
+                {{--                Адрес организационного комитета:--}}
+                {{--                Ургенчский филиал Ташкентского университета информационных технологий имени Мухаммада ал-Хорезми,--}}
+                {{--                г. Ургенч ул. Ал-Хорезми 110.--}}
+                {{--                Тел: +998622246134--}}
+                @if($kon_bool)
+                    Konferensiya veb-sayti:   <a
+                        href="{{ $konferensiya['veb_sayt'] }}">{{ $konferensiya['veb_sayt'] }}</a>
+                @endif
             </p>
             <p>
                 MA'LUMOT UCHUN TELEFON: <br>
-                {{ $konferensiya['telefon'] }} <br>
-{{--                998972116496--}}
-                {{ $konferensiya['kimga'] }} <br>
-{{--                М.Машарипов--}}
-                E-mail: <a href="">{{ $konferensiya['email'] }}</a>
+                @if($kon_bool)
+                    {{ $konferensiya['telefon'] }} <br>
+                @endif
+                {{--                998972116496--}}
+                @if($kon_bool)
+                    {{ $konferensiya['kimga'] }} <br>
+                @endif
+                {{--                М.Машарипов--}}
+                @if($kon_bool)
+                    E-mail: <a href="mailto: {{ $konferensiya['email'] }} ">{{ $konferensiya['email'] }}</a>
+                @endif
             </p>
             <p class="">
-                Pul O'tkazmalari uchun: <br>
-                {{ $konferensiya['shot_raqam'] }}
-{{--                Ўзбекистон Республикаси Молия вазирлиги Ягона Ғазначилиги--}}
-{{--                ш/ҳ 400910860334017094100078002--}}
-{{--                СТИР 205767452 ОКОНХ 92110--}}
-{{--                Молия Вазирлиги Ғазначилиги--}}
-{{--                Ғазна ҳ/в 23402000300100001010--}}
-{{--                Банкнинг номи: Марказий банк Тошкент шаҳар ХККМ--}}
-{{--                МФО 00014 СТИР 201122919--}}
+                @if($kon_bool)
+                    Pul O'tkazmalari uchun: <br>
+                    {{ $konferensiya['shot_raqam'] }}
+                @endif
+                {{--                Ўзбекистон Республикаси Молия вазирлиги Ягона Ғазначилиги--}}
+                {{--                ш/ҳ 400910860334017094100078002--}}
+                {{--                СТИР 205767452 ОКОНХ 92110--}}
+                {{--                Молия Вазирлиги Ғазначилиги--}}
+                {{--                Ғазна ҳ/в 23402000300100001010--}}
+                {{--                Банкнинг номи: Марказий банк Тошкент шаҳар ХККМ--}}
+                {{--                МФО 00014 СТИР 201122919--}}
             </p>
         </div>
         <div class="p-1 bg-success" style="width: 70%;">
             <div class="bg-white d-flex text-justify p-2 align-items-center h-100 flex-column">
-               <p>
-                   Sizni xalqaro ilmiy-amaliy anjumanga taklif qilamiz
-                   nomidagi Toshkent axborot texnologiyalari universiteti Urganch filiali
-                   Muhammad al-Xorazmiy Oliy va oʻrta maxsus vazirligi bilan birgalikda
-                   Oʻzbekiston Respublikasi Taʼlim va Taraqqiyot va axborot vazirligi
-                   O‘zbekiston Respublikasi texnologiyalari va kommunikatsiyalari
-                   {{ $info['vaqti'] }} года на тему
-                   {{ $info['nomi'] }}
-{{--                   “Информационные технологии, сети и телекоммуникации” ITNT-2022.--}}
-               </p>
+                <p>
+                    Sizni Muhammad al-Xorazmiy nomidagi Toshkent axborot texnologiyalari
+                    universiteti Urganch filiali tomonidan O‘zbekiston Respublikasi Oliy
+                    va o‘rta maxsus ta’lim vazirligi hamda Taraqqiyot vazirliklari bilan
+                    hamkorlikda o‘tkazilayotgan xalqaro ilmiy-amaliy anjumanga taklif etamiz.
+                    O‘zbekiston Respublikasi axborot texnologiyalari va kommunikatsiyalari
+                    @if($info_bool)
+                        {{ $info['vaqti'] }}
+                    @endif kunlari @if($info_bool)
+                        {{ $info['nomi'] }}
+                    @endif
+                    {{--                    Sizni xalqaro ilmiy-amaliy anjumanga taklif qilamiz--}}
+                    {{--                    nomidagi Toshkent axborot texnologiyalari universiteti Urganch filiali--}}
+                    {{--                    Muhammad al-Xorazmiy Oliy va oʻrta maxsus vazirligi bilan birgalikda--}}
+                    {{--                    Oʻzbekiston Respublikasi Taʼlim va Taraqqiyot va axborot vazirligi--}}
+                    {{--                    O‘zbekiston Respublikasi texnologiyalari va kommunikatsiyalari--}}
+
+
+                    {{--                   “Информационные технологии, сети и телекоммуникации” ITNT-2022.--}}
+                </p>
                 <p style="white-space: pre-line">
-                    {{ $info['shobalar'] }}
+                    @if($info_bool)
+                        {{ $info['shobalar'] }}
+                    @endif
                 </p>
                 <p style="white-space: pre-line; text-align: justify">
-                    {{ $info['shartlar'] }}
+                    @if($info_bool)
+                        {{ $info['shartlar'] }}
+                    @endif
                 </p>
                 <p class="fw-bold">
-                    Hujjatlarni topshirishning oxirgi muddati {{ $info['deadline'] }} -yil elektron versiyada o'zbek, rus yoki ingliz tillarida.
+                    Hujjatlarni topshirishning oxirgi muddati @if($info_bool)
+                        {{ $info['deadline'] }}
+                    @endif elektron versiyada o'zbek,
+                    rus yoki ingliz tillarida.
                 </p>
-                <p> Maqolalar elektron pochta manziliga yuborilishi kerak <a href="" class="fw-bold text-black">{{ $konferensiya['email'] }}</a> </p>
+                @if($kon_bool)
+                    <p> Maqolalar elektron pochta manziliga yuborilishi kerak
+                        <a href="mailto: {{ $konferensiya['email'] }} " class="fw-bold text-black">{{ $konferensiya['email'] }}</a>
+                    </p>
+                @endif
             </div>
         </div>
     </div>
 </div>
 </body>
 <script>
-    function download(){
+    function download() {
         let x = document.getElementsByClassName('btn')[0];
         x.style.display = 'none';
         window.print();
