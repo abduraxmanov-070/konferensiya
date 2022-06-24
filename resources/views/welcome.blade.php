@@ -421,37 +421,39 @@
             </div>
         </div>
         <div class="p-1 bg-success" style="width: 70%;">
-            <div class="bg-white d-flex text-center p-1 align-items-center h-100">
-                <h2 class="fw-bold">
+            <div class="bg-white d-flex justify-center p-1 align-items-center h-100 flex-column">
+                <h2 class="fw-bold" >
                     @if($info_bool)
-                        {{ $info['nomi'] }} <br>
+                       " {{ $info['nomi'] }} "<br>
                     @endif
                     {{--                    “ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ, СЕТИ И ТЕЛЕКОММУНИКАЦИИ” ITNT-2022--}}
-                    XALQARO ILMIY-AMALIY KONFERENSIYA
+
                 </h2>
+                <br>
+                <p>XALQARO ILMIY-AMALIY KONFERENSIYA</p>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="p-3 bg-success text-center" style="width: 30%;">
-            <p>O‘ZBEKISTON RESPUBLIKASI OLIY VA O‘RTA MAXSUS TA’LIM VAZIRLIGI</p>
+            <p>O‘ZBEKISTON RESPUBLIKASI OLIY VA O‘RTA MAXSUS TA‘LIM VAZIRLIGI</p>
             @if($kon_bool)
                 <p>{{ $konferensiya['vazirliklar'] }}</p>
-            @endif
+            @endif <br>
             {{--            <p>МИНИСТЕРСТВО ПО РАЗВИТИЮ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ И КОММУНИКАЦИЙ РЕСПУБЛИКИ УЗБЕКИСТАН</p>--}}
             @if($kon_bool)
                 <p>{{ $konferensiya['filial'] }}</p>
             @endif
             {{--            <p>УРГЕНЧСКИЙ ФИЛИАЛ ТУИТ ИМЕНИ МУХАММАДА АЛ-ХОРЕЗМИ</p>--}}
-            <p>MA'LUMOT POCHTA
+            <p>MA'LUMOT UCHUN
             <div class="border-top my-3"></div>
             <p>
                 @if($info_bool)
                     {{ $info['vaqti'] }}
-                @endif sanasida xalqaro ilmiy-amaliy konferensiya o‘tkazilmoqda
+                @endif sanasida xalqaro ilmiy-amaliy konferensiya
                 @if($info_bool)
-                    {{ $info['nomi'] }}
-                @endif
+                    "{{ $info['nomi'] }}"
+                @endif o‘tkazilmoqda
                 {{--                “Информационные технологии, сети и телекоммуникации”.--}}
             </p>
             <p>
@@ -503,10 +505,15 @@
                     va o‘rta maxsus ta’lim vazirligi hamda Taraqqiyot vazirliklari bilan
                     hamkorlikda o‘tkazilayotgan xalqaro ilmiy-amaliy anjumanga taklif etamiz.
                     O‘zbekiston Respublikasi axborot texnologiyalari va kommunikatsiyalari
+
+                    Sizni Muhammad al-Xorazmiy nomidagi Toshkent axborot texnologiyalari universiteti Urganch
+                    filiali tomonidan O‘zbekiston Respublikasi Oliy va O‘rta maxsus ta’lim Vazirligi hamda
+                    Oʻzbekiston Respublikasi Axborot Texnologiyalari va kommunikatsiyalarini rivojlantirish Vazirliklari
+                    bilan hamkorlikda o‘tkazilayotgan xalqaro ilmiy-amaliy anjumanga taklif etamiz.
                     @if($info_bool)
                         {{ $info['vaqti'] }}
                     @endif kunlari @if($info_bool)
-                        {{ $info['nomi'] }}
+                        "{{ $info['nomi'] }}" mavzusida
                     @endif
                     {{--                    Sizni xalqaro ilmiy-amaliy anjumanga taklif qilamiz--}}
                     {{--                    nomidagi Toshkent axborot texnologiyalari universiteti Urganch filiali--}}
